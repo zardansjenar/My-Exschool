@@ -18,7 +18,7 @@
 					<i class="icon-reorder shaded"></i>
 				</a>
 
-			  	<a class="brand" href="index.html"> Menu Admin </a>
+			  	<a class="brand" href="<?php base_url('index.php/pelatih/homePelatih') ?>"> Home </a>
 
 			</div>
 		</div><!-- /navbar-inner -->
@@ -35,7 +35,7 @@
 						<ul class="widget widget-menu unstyled">
 							
 							<li class="active">
-								<a href="<?php echo base_url('index.php/pelatih/createInformasi') ?>">
+								<a href="<?php echo base_url('index.php/pelatih/beritaKhusus') ?>">
 									<i class="menu-icon icon-folder-close"></i>
 									Informasi Khusus
 								</a>
@@ -70,7 +70,7 @@
 										
 									<?php echo $error;?>
 
-									<?php echo form_open_multipart('admin/uploadFile');?>
+									<?php echo form_open_multipart('pelatih/uploadFile');?>
 
 										<input type="file" name="userfile" size="20" />
 
