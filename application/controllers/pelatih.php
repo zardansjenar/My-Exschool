@@ -6,12 +6,13 @@ class pelatih extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->helper('form');
+		$this->load->helper('url');
 		$this->load->model('m_admin');
 	}
 
 	public function index()
 	{
-		$this->load->view(' upload_form_khusus');
+		$this->load->view('upload_form_khusus');
 	}
 
 	public function createInformasi()
@@ -29,11 +30,12 @@ class pelatih extends CI_Controller {
 		$this->load->view('upload_form_khusus', array('error' => ' ' ));
 	}
 
-	public function do_upload(){
+	public function uploadFile(){
 
-            $config['upload_path']          = './uploads/';
-            $config['allowed_types']        = 'gif|jpg|png|mkv|rar';
-           
+            $config['upload_path']          = './assets/img/portfolio';
+            $config['allowed_types']        = 'gif|jpg|png|mkv|rar|mkv';
+            $config['max_size']	=0;
+			           
 
                 $this->load->library('upload', $config);
 
@@ -48,7 +50,7 @@ class pelatih extends CI_Controller {
                         $data = array('upload_data' => $this->upload->data());
 
                         $this->load->view('upload_success', $data);
-                        $this->load->view('upload_form_khusus', $data);
+                        $this->load->view('upload_form_khusus');
                 }
 
 	}
