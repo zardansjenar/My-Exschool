@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Modul 10</title>
+	<title>Menu Admin</title>
 	<link type="text/css" href="<?php echo base_url('files/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet">
 	<link type="text/css" href="<?php echo base_url('files/bootstrap/css/bootstrap-responsive.min.css') ?>" rel="stylesheet">
 	<link type="text/css" href="<?php echo base_url('files/css/theme.css') ?>" rel="stylesheet">
@@ -18,14 +18,14 @@
 					<i class="icon-reorder shaded"></i>
 				</a>
 
-			  	<a class="brand" href="<?php echo base_url('index.php/admin/homeAdmin')?>"> Home </a>
 
 			</div>
 		</div><!-- /navbar-inner -->
 	</div><!-- /navbar -->
 
 
-<div class="wrapper">
+
+	<div class="wrapper">
 		<div class="container">
 			<div class="row">
 				<div class="span3">
@@ -33,45 +33,8 @@
 
 						<ul class="widget widget-menu unstyled">
 							<li class="active">
-								<a href="<?php echo base_url('index.php/admin/dataSekolah') ?>">
 									<i class="menu-icon icon-folder-close"></i>
-									Input Data Sekolah
-								</a>
-							</li>
-							<li class="active">
-								<a href="<?php echo base_url('index.php/admin/createPelatih') ?>">
-									<i class="menu-icon icon-folder-close"></i>
-									Tambah Pelatih
-								</a>
-							</li>
-							<li class="active">
-								<a href="<?php echo base_url('index.php/admin/createExtrakulikuler') ?>">
-									<i class="menu-icon icon-folder-close"></i>
-									Tambah Extrakulikuler
-								</a>
-							</li>
-							<li class="active">
-								<a href="<?php echo base_url('index.php/admin/createSiswa') ?>">
-									<i class="menu-icon icon-folder-close"></i>
-									Tambah Siswa
-								</a>
-							</li>
-							<li>
-								<a href="<?php echo base_url('index.php/admin/beritaUmum') ?>">
-									<i class="menu-icon icon-circle-arrow-up"></i>
-									Buat Berita Umum
-								</a>
-							</li>
-							<li>
-								<a href="<?php echo base_url('index.php/admin/view') ?>">
-									<i class="menu-icon icon-table"></i>
-									Kelola Siswa 
-								</a>
-							</li>
-							<li>
-								<a href="<?php echo base_url('index.php/admin/view') ?>">
-									<i class="menu-icon icon-table"></i>
-									Kelola Pelatih 
+									Registrasi Extrakulicular
 								</a>
 							</li>
 						</ul><!--/.widget-nav-->
@@ -83,25 +46,19 @@
 					<div class="content">
 						<div class="module">
 							<div class="module-head">
-								<h3>Buat Berita Umum</h3>
+								<h3>Form Registrasi Extrakulikuler</h3>
 							</div>
 							<div class="module-body">
 								<div class="stream-composer media">
 									<div class="media-body">
-
-									<?php echo $error;?>
-
-									<?php echo form_open_multipart('admin/uploadFile');?>
-
-										<input type="file" name="userfile" size="20" />
-
-										<br /><br />
-
-										<input type="submit" value="upload" />
-
-									</form>
-
-								</div><!--/.module-body-->
+		
+											Select Extraculicular : <br> 
+											<input type = "text" name="nama" placeholder="Masukkan nama"></br>		
+											<input type = "submit" name="submit" value="submit"></br>			
+										<?php echo form_close(); ?>
+									</div>
+								</div>
+                            </div><!--/.module-body-->
 						</div><!--/.module-->
 					</div><!--/.content-->
 				</div><!--/.span9-->

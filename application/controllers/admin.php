@@ -42,6 +42,7 @@ class admin extends CI_Controller {
 	{
 		$this->load->view('createPelatih');
 	}
+
 	public function inputDataPelatih()
 	{
 		$nip = $this->input->post('nip');
