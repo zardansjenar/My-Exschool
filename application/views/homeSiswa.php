@@ -50,7 +50,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="">Feature Siswa</a>
+          <a class="navbar-brand" href="<?php echo base_url('index.php/siswa') ?>">Feature Siswa</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->

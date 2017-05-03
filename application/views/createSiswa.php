@@ -18,7 +18,7 @@
 					<i class="icon-reorder shaded"></i>
 				</a>
 
-			  	<a class="brand" href="<?php echo base_url('index.php/admin/homeAdmin')"> Menu Admin </a>
+			  	<a class="brand" href="<?php echo base_url('index.php/admin/homeAdmin') ?>"> Home </a>
 
 			</div>
 		</div><!-- /navbar-inner -->
