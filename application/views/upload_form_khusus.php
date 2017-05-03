@@ -41,12 +41,6 @@
 								</a>
 							</li>
 							<li class="active">
-								<a href="<?php echo base_url('index.php/pelatih/viewData') ?>">
-									<i class="menu-icon icon-folder-close"></i>
-									Data Siswa
-								</a>
-							</li>
-							<li class="active">
 								<a href="<?php echo base_url('index.php/pelatih/createJadwal') ?>">
 									<i class="menu-icon icon-folder-close"></i>
 									Jadwal latihan
