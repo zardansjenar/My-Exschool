@@ -63,7 +63,7 @@
 									<div class="media-body">
 										<?php echo form_open('pelatih/createJadwal') ?>
 											Hari : <br> 
-											<input type = "text" name="hari" placeholder="Masukkan hari"></br>
+											<input type = "text" name="hari" placeholder="Masukkan hari latihan"></br>
 											Tanggal : <br> 
 											<input type = "text" name="tanggal" placeholder="Masukkan Tanggal"></br>			
 											Waktu : <br> 
