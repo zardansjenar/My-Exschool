@@ -54,6 +54,11 @@ class pelatih extends CI_Controller {
                 }
 
 	}
+
+	public function createJadwal()
+	{
+		$this->load->view('createJadwal');
+	}
 	
 }
 
