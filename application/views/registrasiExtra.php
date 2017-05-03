@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Menu Admin</title>
+	<title>Menu Siswa</title>
 	<link type="text/css" href="<?php echo base_url('files/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet">
 	<link type="text/css" href="<?php echo base_url('files/bootstrap/css/bootstrap-responsive.min.css') ?>" rel="stylesheet">
 	<link type="text/css" href="<?php echo base_url('files/css/theme.css') ?>" rel="stylesheet">
@@ -18,6 +18,7 @@
 					<i class="icon-reorder shaded"></i>
 				</a>
 
+			  	<a class="brand" href="<?php echo base_url('index.php/siswa/homeSiswa')?>">Home</a>
 
 			</div>
 		</div><!-- /navbar-inner -->
@@ -33,6 +34,7 @@
 
 						<ul class="widget widget-menu unstyled">
 							<li class="active">
+								<a href="<?php echo base_url('index.php/siswa/registrasiExtra') ?>">
 									<i class="menu-icon icon-folder-close"></i>
 									Registrasi Extrakulicular
 								</a>
@@ -51,6 +53,7 @@
 							<div class="module-body">
 								<div class="stream-composer media">
 									<div class="media-body">
+										<?php echo form_open('siswa/inputRegistrasiExtra'); ?>
 		
 											Select Extraculicular : <br> 
 											<input type = "text" name="nama" placeholder="Masukkan nama"></br>		
