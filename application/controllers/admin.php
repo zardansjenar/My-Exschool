@@ -159,6 +159,19 @@ class admin extends CI_Controller {
 	{
 		$this->load->view('homeAdmin');
 	}
+	public function viewPelatih($value='')
+	{
+		$this->load->database();
+			$jumlah_data = $this->mahasiswa_m->jumlah_data();
+			$this->load->library('pagination');
+			$config['base_url'] = base_url().'index.php/mahasiswa/view_mhs/';
+			$config['total_rows'] = $jumlah_data;
+			$config['per_page'] = 10;
+			$from = $this->uri->segment(3);
+			$this->pagination->initialize($config);		
+			$data['user'] = $this->mahasiswa_m->data($config['per_page'],$from);
+			$this->load->view('table',$data);
+	}
 	
 }
 

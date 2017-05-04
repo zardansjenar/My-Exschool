@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Home</title>
+	<title>Menu Admin</title>
 	<link type="text/css" href="<?php echo base_url('files/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet">
 	<link type="text/css" href="<?php echo base_url('files/bootstrap/css/bootstrap-responsive.min.css') ?>" rel="stylesheet">
 	<link type="text/css" href="<?php echo base_url('files/css/theme.css') ?>" rel="stylesheet">
@@ -18,11 +18,13 @@
 					<i class="icon-reorder shaded"></i>
 				</a>
 
-			  	<a class="brand" href="<?php echo base_url('index.php/admin/homeAdmin')?>">Home</a>
+			  	<a class="brand" href="<?php echo base_url('index.php/admin/homeAdmin') ?>"> Home </a>
 
 			</div>
 		</div><!-- /navbar-inner -->
 	</div><!-- /navbar -->
+
+
 
 	<div class="wrapper">
 		<div class="container">
@@ -82,60 +84,56 @@
 					<div class="content">
 						<div class="module">
 							<div class="module-head">
-								<h3>Kelola Data siswa</h3>
+								<h3>Tambahkan Data Pelatih</h3>
 							</div>
-
-							<div class="module-body table">
-									<table cellpadding="0" cellspacing="0" border="0" class="datatable-1 table table-bordered table-striped	 display" width="100%">
-										<thead>
-											<tr>
-												<th><center>No</center></th>
-												<th><center>NIP</center></th>
-												<th><center>Nama</center></th>
-												<th><center>Alamat</center></th>
-												<th><center>Tanggal lahir</center></th>
-												<th><center>No.telp</center></th>
-												<th><center>Email</center></th>
-												<th><center>Jenis Kelamin</center></th>
-												<th><center>Username Pelatih</center></th>
-												<th><center>Pssword Pelatih</center></th>
-												<th><center>Jenis pelatih</center></th>
-											
-
-
-											</tr>
-										</thead>
-										<tbody>
-												<?php 
-													$no = $this->uri->segment('3') + 1;
-													foreach($user as $u){ 
-												?>
-												<tr>
-												  <td><?php echo $no++; ?></td>
-												  <td><?php echo $u->nip?></td>
-												  <td><?php echo $u->nama?></td>
-												  <td><?php echo $u->alamat?></td>
-												  <td><?php echo $u->tanggal_lahir?></td>
-												  <td><?php echo $u->no_telp?></td>
-												  <td><?php echo $u->email?></td>
-												  <td><?php echo $u->jenis_kelamin?></td>
-												  <td><?php echo $u->username_pelatih?></td>
-												  <td><?php echo $u->password_pelatih?></td>
-												  <td><?php echo $u->jenis_pelatih?></td>
-												  <td><center> <a href="<?php echo base_url('index.php/mahasiswa/edit_mahasiswa/'.$u->nim)?>">edit</a> | 
-													<a href="<?php echo base_url('index.php/mahasiswa/delete_mahasiswa/'.$u->nim)?> ">hapus</a> </center></td>
-												</tr>
-												<?php } ?>
-										</tbody>
-										<tfoot>
-												
-										</tfoot>
-									</table>
-									<?php 
-										echo $this->pagination->create_links();
-									?>
-								</div>
-								
+							<div class="module-body">
+									<div class="stream-composer media">
+										<div class="media-body">
+											<?php echo form_open("mahasiswa/action_edit_mhs/".$nim); ?> 
+												<h5>Nim :</h5>
+												<div class="row-fluid">
+													<input type="text" name="nip" value="<?php echo $nip; ?>" class="span12" style="height: 30px; resize: none;" disabled></input>
+												</div>
+												<h5>Nama :</h5>
+												<div class="row-fluid">
+													<input type="text" name="nama" class="span12" style="height: 30px; resize: none;"></input>
+												</div>
+												<h5>Email :</h5>
+												<div class="row-fluid">
+													<input type="text" name="alamat" class="span12" style="height: 30px; resize: none;"></input>
+												</div>
+												<h5>Jurusan :</h5>
+												<div class="row-fluid">
+													<input type="text" name="tanggal lahir" class="span12" style="height: 30px; resize: none;"></input>
+													<h5>Jurusan :</h5>
+												<div class="row-fluid">
+													<input type="text" name="no telp" class="span12" style="height: 30px; resize: none;"></input>
+													<h5>Jurusan :</h5>
+												<div class="row-fluid">
+													<input type="text" name="email" class="span12" style="height: 30px; resize: none;"></input>
+													<h5>Jurusan :</h5>
+												<div class="row-fluid">
+													<input type="text" name="jenis kelamin" class="span12" style="height: 30px; resize: none;"></input>
+													<h5>Jurusan :</h5>
+												<div class="row-fluid">
+													<input type="text" name="username pelatih" class="span12" style="height: 30px; resize: none;"></input>
+													<h5>Jurusan :</h5>
+												<div class="row-fluid">
+													<input type="text" name="password pelatih" class="span12" style="height: 30px; resize: none;"></input>
+													<h5>Jurusan :</h5>
+												<div class="row-fluid">
+													<input type="text" name="jenis pelatih" class="span12" style="height: 30px; resize: none;"></input>
+												</div>
+												<br></br>
+												<div class="clearfix">
+													<input type="submit" name="submit" value="Simpan Data" class="btn btn-primary pull-right">
+													<p>&nbsp;</p>
+												</div>
+												<input type="hidden" name="MM_insert" value="form1">
+											</form>
+											<p>&nbsp;</p>										
+										</div>
+									</div>
                             </div><!--/.module-body-->
 						</div><!--/.module-->
 					</div><!--/.content-->
