@@ -18,7 +18,7 @@
 					<i class="icon-reorder shaded"></i>
 				</a>
 
-			  	<a class="brand" href="<?php base_url('index.php/pelatih/homePelatih') ?>"> Home </a>
+			  	<a class="brand" href="<?php echo base_url('index.php/pelatih/homePelatih') ?>">Home</a>
 
 			</div>
 		</div><!-- /navbar-inner -->
@@ -56,7 +56,7 @@
 					<div class="content">
 						<div class="module">
 							<div class="module-head">
-								<h3>Tambahkan Data Pelatih</h3>
+								<h3>Tambahkan Informasi khusus</h3>
 							</div>
 							<div class="module-body">
 								<div class="stream-composer media">

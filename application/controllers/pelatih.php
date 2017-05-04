@@ -20,11 +20,6 @@ class pelatih extends CI_Controller {
 		$this->load->view('upload_form_khusus');
 	}
 
-	public function homePelatih()
-	{
-		$this->load->view('homeTeacher');
-	}
-
 	public function beritaKhusus()
 	{
 		$this->load->view('upload_form_khusus', array('error' => ' ' ));
@@ -60,6 +55,11 @@ class pelatih extends CI_Controller {
 		$this->load->view('createJadwal');
 	}
 	
+	public function homePelatih()
+	{
+		$this->load->view('homeTeacher');
+	}
+
 }
 
 /* End of file admin.php */
