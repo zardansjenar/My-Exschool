@@ -90,7 +90,7 @@ class admin extends CI_Controller {
 		if($input){
 			$this->load->view('createSiswa'); 
 		}else{
-
+			echo "gagal input";	
 		}
 	}
 
@@ -143,10 +143,16 @@ class admin extends CI_Controller {
                 }
                 else
                 {
-                        $data = array('upload_data' => $this->upload->data());
+      					$img = $this->upload->data();
+      					$gambar = $img['file_name'];
+						$keterangan = $this->input->post('keterangan');
 
-                        $this->load->view('upload_success', $data);
+						$dataUmum = array('id_umum' => " ", 'gambar' => $gambar, 'keterangan' => $keterangan);
+
+						$this ->m_admin->insertData('informasi_beranda',$dataUmum);
+
                         $this->load->view('upload_form');
+                        echo "upload berhasil";
                 }
 
 	}
