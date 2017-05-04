@@ -84,47 +84,50 @@
 							<div class="module-head">
 								<h3>Kelola Data siswa</h3>
 							</div>
-							<div class="module-body">
-								<div class="stream-composer media">
-									<div class="media-body">
-										<table border = '1' >
-										<tr>
-											<td>No</td>
-											<td>NISN</td>
-											<td>Kelas</td>
-											<td>Nama</td>
-											<td>Alamat</td>
-											<td>Tanggal lahir</td>
-											<td>No telp</td>
-											<td>Email</td>
-											<td>Kelamin</td>
-											<td>Username</td>
-											<td>Password</td>
-										</tr>
-										
-										<?php
-											$no = $this->uri->segment(3)+1;
-											foreach ($extrakulikuler as $valsiswa)
-											{
-										?>
+							<div class="module-body table">
+									<table cellpadding="0" cellspacing="0" border="0" class="datatable-1 table table-bordered table-striped	 display" width="100%">
+										<thead>
 											<tr>
-												<td><?php echo $no; ?></td>
-												<td><?php echo $valsiswa->nisn; ?></td>
-												<td><?php echo $valsiswa->kelas; ?></td>
-												<td><?php echo $valsiswa->nama; ?></td>
-												<td><?php echo $valsiswa->alamat; ?></td>
-												<td><?php echo $valsiswa->tl; ?></td>
-												<td><?php echo $valsiswa->no_telp; ?></td>
-												<td><?php echo $valsiswa->email; ?></td>
-												<td><?php echo $valsiswa->jk; ?></td>
-												<td><?php echo $valsiswa->username; ?></td>
-												<td><?php echo $valsiswa->password; ?></td>
+												<th><center>No</center></th>
+												<th><center>Nip</center></th>
+												<th><center>pelatih Ekstrakulikuler</center></th>
+												<th><center>Nama</center></th>
+												<th><center>Alamat</center></th>
+												<th><center>Tanggal lahir</center></th>
+												<th><center>Email</center></th>
+												<th><center>Jenis Kelamin</center></th>
+												<th><center>Password</center></th>
 											</tr>
-										<?php
-											$no++;
-											}
-										?>
-									</div>
+										</thead>
+										<tbody>
+												<?php 
+													$no = $this->uri->segment('3') + 1;
+													foreach($user as $u){ 
+												?>
+												<tr>
+												  <td><?php echo $no++; ?></td>
+												  <td><?php echo $u->nip ?></td>
+												  <td><?php echo $u->pelatih ?></td>
+												  <td><?php echo $u->nama ?></td>
+												  <td><?php echo $u->alamat ?></td>
+												  <td><?php echo $u->tl?></td>
+												  <td><?php echo $u->no_telp?></td>
+												  <td><?php echo $u->email ?></td>
+												  <td><?php echo $u->jk?></td>
+												  <td><?php echo $u->password?></td>
+												  
+												  <td><center> <a href="<?php echo base_url('index.php/admin/editPelatih/'.$u->nip)?>">edit</a> | 
+													<a href="<?php echo base_url('index.php/pelatih/deletePelatih/'.$u->nip)?> ">hapus</a> </center></td>
+												</tr>
+												<?php } ?>
+										</tbody>
+										<tfoot>
+												
+										</tfoot>
+									</table>
+									<?php 
+										echo $this->pagination->create_links();
+									?>
 								</div>
 								
                             </div><!--/.module-body-->
