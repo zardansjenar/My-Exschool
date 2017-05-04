@@ -149,10 +149,9 @@ class admin extends CI_Controller {
 
 						$dataUmum = array('id_umum' => " ", 'gambar' => $gambar, 'keterangan' => $keterangan);
 
-						$this ->m_admin->insertData('informasi_beranda',$dataUmum);
+						$this ->m_admin->insertData('informasi_umum',$dataUmum);
 
                         $this->load->view('upload_form');
-                        echo "upload berhasil";
                 }
 
 	}
