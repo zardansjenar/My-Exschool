@@ -90,13 +90,14 @@
 											<tr>
 												<th><center>No</center></th>
 												<th><center>Nip</center></th>
-												<th><center>pelatih Ekstrakulikuler</center></th>
+												<th><center>pelatih</center></th>
 												<th><center>Nama</center></th>
-												<th><center>Alamat</center></th>
-												<th><center>Tanggal lahir</center></th>
-												<th><center>Email</center></th>
-												<th><center>Jenis Kelamin</center></th>
-												<th><center>Password</center></th>
+												<th><center>alamat</center></th>
+												<th><center>tanggal lahir</center></th>
+												<th><center>no telp</center></th>
+												<th><center>email</center></th>
+												<th><center>jenis kelamin</center></th>
+												<th><center>password</center></th>
 											</tr>
 										</thead>
 										<tbody>
@@ -112,12 +113,11 @@
 												  <td><?php echo $u->alamat ?></td>
 												  <td><?php echo $u->tl?></td>
 												  <td><?php echo $u->no_telp?></td>
-												  <td><?php echo $u->email ?></td>
+												  <td><?php echo $u->email?></td>
 												  <td><?php echo $u->jk?></td>
 												  <td><?php echo $u->password?></td>
-												  
-												  <td><center> <a href="<?php echo base_url('index.php/admin/editPelatih/'.$u->nip)?>">edit</a> | 
-													<a href="<?php echo base_url('index.php/pelatih/deletePelatih/'.$u->nip)?> ">hapus</a> </center></td>
+												  <td><center> <a href="<?php echo base_url('index.php/pelatih/editPelatih/'.$u->nip)?>">edit</a> | 
+													<a href="<?php echo base_url('index.php/pelatih/deleteapelatih/'.$u->nip)?> ">hapus</a> </center></td>
 												</tr>
 												<?php } ?>
 										</tbody>
