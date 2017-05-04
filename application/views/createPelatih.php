@@ -36,7 +36,7 @@
 							<li class="active">
 								<a href="<?php echo base_url('index.php/admin/dataSekolah') ?>">
 									<i class="menu-icon icon-folder-close"></i>
-									Input Data Pelatih
+									Input Data Sekolah
 								</a>
 							</li>
 							<li class="active">
@@ -106,9 +106,7 @@
 											<input type = "text" name="email" placeholder="Masukkan email"></br>			
 											Jenis kelamin : <br> 
 											<input type = "radio" name="jk" value="laki">Laki-laki</br>		
-											<input type = "radio" name="jk" value="perempuan">Perempuan</br>			
-											Username : <br> 
-											<input type = "text" name="username" placeholder="Masukkan username"></br>			
+											<input type = "radio" name="jk" value="perempuan">Perempuan</br>				
 											Password : <br> 
 											<input type = "text" name="password" placeholder="Masukkan password"></br>			
 											<input type = "submit" name="submit" value="submit"></br>			

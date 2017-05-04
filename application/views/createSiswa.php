@@ -107,8 +107,8 @@
 											Jenis kelamin : <br> 
 											<input type = "radio" name="jk" value="0">Laki-laki</br>		
 											<input type = "radio" name="jk" value="1">Perempuan</br>			
-											Username : <br> 
-											<input type = "text" name="username" placeholder="Masukkan username"></br>			
+											Id Ekstrakulikuler : <br> 
+											<input type = "text" name="id" placeholder="Masukkan id ekstrakulikuler"></br>			
 											Password : <br> 
 											<input type = "text" name="password" placeholder="Masukkan password"></br>			
 											<input type = "submit" name="submit" value="submit"></br>		
