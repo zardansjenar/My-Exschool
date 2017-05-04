@@ -134,7 +134,7 @@
                                 <h3>Zardans Jenar</h3>
                                 <p>Developer</p>
                                 <p>Email : zardansjenar@gmail.com</p> 
-                                <p>No Telp : +6285606984466</p>
+                                <p>No Telp : +6282</p>
                                 <p>Line : zardans_jenar</p>
                             </div>
                         </div>
@@ -145,10 +145,10 @@
                             <img src="<?php echo base_url('assets/img/team/02.jpg') ?>" alt="..." class="img-circle team-img">
                             <div class="caption">
                                 <h3>Ilham Satrian</h3>
-                                <p>Databases</p>
+                                <p>Database Analysis</p>
                                 <p>Email : ilhamsatrian@gmail.com</p> 
                                 <p>No Telp : +6282218325106</p>
-                                <p>Line : hamz_satria</p>
+                                <p>Line : hamz_satrian</p>
                             </div>
                         </div>
                     </div>
@@ -158,7 +158,7 @@
                             <img src="<?php echo base_url('assets/img/team/03.jpg') ?>" alt="..." class="img-circle team-img">
                             <div class="caption">
                                 <h3>Putri Cendikia</h3>
-                                <p>Analysis</p>
+                                <p>Analysis System</p>
                                 <p>Email : putricendikia09@gmail.com</p> 
                                 <p>No Telp : +6282282847542</p>
                                 <p>Line : putricendikia</p>
@@ -171,8 +171,8 @@
                             <img src="<?php echo base_url('assets/img/team/04.jpg') ?>" alt="..." class="img-circle team-img">
                             <div class="caption">
                                 <h3>Isep Mumu</h3>
-                                <p>Analysis</p>
-                                 <p>Email : ilhamsatrian@gmail.com</p> 
+                                <p>Desainer</p>
+                                <p>Email : isepmm@gmail.com</p> 
                                 <p>No Telp : +6281321146355</p>
                                 <p>Line : isepmm</p>
                             </div>
