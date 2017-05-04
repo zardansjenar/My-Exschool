@@ -36,7 +36,7 @@
 							<li class="active">
 								<a href="<?php echo base_url('index.php/admin/dataSekolah') ?>">
 									<i class="menu-icon icon-folder-close"></i>
-									Input Data Extrakulikuler
+									Input Data Sekolah
 								</a>
 							</li>
 							<li class="active">

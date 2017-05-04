@@ -53,10 +53,9 @@ class admin extends CI_Controller {
 		$no_telp = $this->input->post('no_telp');
 		$email = $this->input->post('email');
 		$jk = $this->input->post('jk');
-		$username = $this->input->post('username');
 		$password = $this->input->post('password');
 
-		$dataPelatih = array('nip' => $nip,'pelatih' => $pelatih,'nama' => $nama,'alamat' => $alamat,'tl' => $tl,'no_telp' => $no_telp,'email' => $email,'jk' => $jk,'username' => $username,'password' => $password);
+		$dataPelatih = array('nip' => $nip,'pelatih' => $pelatih,'nama' => $nama,'alamat' => $alamat,'tl' => $tl,'no_telp' => $no_telp,'email' => $email,'jk' => $jk,'password' => $password);
 	
 		$input = $this ->m_admin->insertData('pelatih',$dataPelatih);
 		if($input){
@@ -81,10 +80,10 @@ class admin extends CI_Controller {
 		$noTelp = $this->input->post('noTelp');
 		$email = $this->input->post('email');
 		$jk = $this->input->post('jk');
-		$username = $this->input->post('username');
+		$id = $this->input->post('id');
 		$password = $this->input->post('password');
 
-		$dataSiswa = array('nisn' => $nisn,'kelas' => $kelas,'nama' => $nama,'alamat' => $alamat,'tl' => $tl,'no_telp'=> $noTelp,'email'=>$email,'jk'=>$jk,'username'=>$username,'password'=>$password);
+		$dataSiswa = array('nisn' => $nisn,'kelas' => $kelas,'nama' => $nama,'alamat' => $alamat,'tl' => $tl,'no_telp'=> $noTelp,'email'=>$email,'jk'=>$jk,'id'=>$id,'password'=>$password);
 
 		$input = $this->m_admin->insertData('siswa',$dataSiswa);
 		if($input){
@@ -101,7 +100,7 @@ class admin extends CI_Controller {
 
 	public function inputDataExtra()
 	{
-		$id = $this->input->post('id');
+		
 		$nama = $this->input->post('nama');
 		$npsn = $this->input->post('npsn');
 		$hari = $this->input->post('hari');
@@ -111,9 +110,9 @@ class admin extends CI_Controller {
 		$nip = $this->input->post('nip');
 
 
-		$dataExtra = array('id' => $id,'nama' => $nama,'npsn' => $npsn,'hari' => $hari,'waktu' => $waktu,'keterangan' => $keterangan, 'nip' => $nip);
+		$dataExtra = array('id' => " ",'nama' => $nama,'npsn' => $npsn,'hari' => $hari,'waktu' => $waktu, 'lokasi' => $lokasi, 'keterangan' => $keterangan, 'nip' => $nip);
 	
-		$input = $this ->m_admin->insertData('extrakulikuler',$dataExtra);
+		$input = $this ->m_admin->insertData('ekstrakulikuler',$dataExtra);
 		if($input){
 			$this->load->view('createExtra');
 		}else{

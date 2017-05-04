@@ -39,6 +39,7 @@ class login extends CI_Controller {
 			$this->load->view('home');
 		}
 	}
+
 	public function loginAdmin()
 	{
 		$id = $this->input->post('id');
@@ -100,8 +101,6 @@ class login extends CI_Controller {
 		$this->session->sess_destroy();
 		$this->load->view('loginPelatih');
 	}
-
-
 }
 
 /* End of file login.php */
