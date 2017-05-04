@@ -89,14 +89,13 @@
 								<div class="stream-composer media">
 									<div class="media-body">
 
-									<?php echo $error;?>
 
 									<?php echo form_open_multipart('admin/uploadFile');?>
 
-										<input type="file" name="userfile" size="20" />
-
-										<br /><br />
-
+										<textarea name="keterangan" placeholder="keterangan"></textarea>
+										<br>	
+										<input type="file" name="userfile" size="20"><br/>
+										<br>		
 										<input type="submit" value="upload" />
 
 									</form>
