@@ -18,7 +18,7 @@
 					<i class="icon-reorder shaded"></i>
 				</a>
 
-			  	<a class="brand" href="<?php base_url('index.php/pelatih/homePelatih') ?>"> Home </a>
+			  	<a class="brand" href="<?php echo base_url('index.php/pelatih/homePelatih')?>">Home</a>
 
 			</div>
 		</div><!-- /navbar-inner -->
