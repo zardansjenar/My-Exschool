@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Modul 10</title>
+	<title>Menu Admin</title>
 	<link type="text/css" href="<?php echo base_url('files/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet">
 	<link type="text/css" href="<?php echo base_url('files/bootstrap/css/bootstrap-responsive.min.css') ?>" rel="stylesheet">
 	<link type="text/css" href="<?php echo base_url('files/css/theme.css') ?>" rel="stylesheet">
@@ -18,11 +18,13 @@
 					<i class="icon-reorder shaded"></i>
 				</a>
 
-			  	<a class="brand" href="<?php echo base_url('index.php/admin/homeAdmin')?>">Home</a>
+			  	<a class="brand" href="<?php echo base_url('index.php/admin/homeAdmin') ?>"> Home </a>
 
 			</div>
 		</div><!-- /navbar-inner -->
 	</div><!-- /navbar -->
+
+
 
 	<div class="wrapper">
 		<div class="container">
@@ -62,7 +64,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="<?php echo base_url('index.php/admin/viewSiswa') ?>">
+								<a href="<?php echo base_url('index.php/admin/view') ?>">
 									<i class="menu-icon icon-table"></i>
 									Kelola Siswa 
 								</a>
@@ -82,55 +84,62 @@
 					<div class="content">
 						<div class="module">
 							<div class="module-head">
-								<h3>Kelola Data siswa</h3>
+								<h3>Tambahkan Data Pelatih</h3>
 							</div>
-							<div class="module-body table">
-									<table cellpadding="0" cellspacing="0" border="0" class="datatable-1 table table-bordered table-striped	 display" width="100%">
-										<thead>
-											<tr>
-												<th><center>No</center></th>
-												<th><center>NISN</center></th>
-												<th><center>KELAS</center></th>
-												<th><center>NAMA</center></th>
-												<th><center>ALAMAT</center></th>
-												<th><center>TANGGAL LAHIR</center></th>
-												<th><center>NO TELP</center></th>
-												<th><center>EMAIL</center></th>
-												<th><center>JENIS KELAMIN</center></th>
-												<th><center>ID EKSTRAKULIKULER</center></th>
-												<th><center>PASSWORD</center></th>
-											</tr>
-										</thead>
-										<tbody>
-												<?php 
-													$no = $this->uri->segment('3') + 1;
-													foreach($user as $u){ 
-												?>
-												<tr>
-												  <td><?php echo $no++; ?></td>
-												  <td><?php echo $u->nisn ?></td>
-												  <td><?php echo $u->kelas ?></td>
-												  <td><?php echo $u->nama ?></td>
-												  <td><?php echo $u->alamat ?></td>
-												  <td><?php echo $u->tl ?></td>
-												  <td><?php echo $u->no_telp ?></td>
-												  <td><?php echo $u->email ?></td>
-												  <td><?php echo $u->jk ?></td>
-												  <td><?php echo $u->id_ekstrakulikuler ?></td>
-												  <td><?php echo $u->password ?></td>
-												  <td><center> <a href="<?php echo base_url('index.php/mahasiswa/edit_mahasiswa/'.$u->nim)?>">edit</a> | 
-													<a href="<?php echo base_url('index.php/mahasiswa/delete_mahasiswa/'.$u->nim)?> ">hapus</a> </center></td>
-												</tr>
-												<?php } ?>
-										</tbody>
-										<tfoot>
-												
-										</tfoot>
-									</table>
-									<?php 
-										echo $this->pagination->create_links();
-									?>
-								</div>
+							<div class="module-body">
+									<div class="stream-composer media">
+										<div class="media-body">
+											<?php echo form_open("mahasiswa/action_edit_mhs/".$nim); ?> 
+												<h5>NISN :</h5>
+												<div class="row-fluid">
+													<input type="text" name="nim" value="<?php echo $nim; ?>" class="span12" style="height: 30px; resize: none;" disabled></input>
+												</div>
+												<h5>KELAS :</h5>
+												<div class="row-fluid">
+													<input type="text" name="nama" class="span12" style="height: 30px; resize: none;"></input>
+												</div>
+												<h5>NAMA :</h5>
+												<div class="row-fluid">
+													<input type="text" name="nama" class="span12" style="height: 30px; resize: none;"></input>
+												</div>
+												<h5>ALAMAT :</h5>
+												<div class="row-fluid">
+													<input type="text" name="email" class="span12" style="height: 30px; resize: none;"></input>
+												</div>
+												<h5>TANGGAL LAHIR :</h5>
+												<div class="row-fluid">
+													<input type="text" name="jurusan" class="span12" style="height: 30px; resize: none;"></input>
+												</div>
+												<h5>NO TELP :</h5>
+												<div class="row-fluid">
+													<input type="text" name="jurusan" class="span12" style="height: 30px; resize: none;"></input>
+												</div>
+												<h5>EMAIL :</h5>
+												<div class="row-fluid">
+													<input type="text" name="jurusan" class="span12" style="height: 30px; resize: none;"></input>
+												</div>
+												<h5>JENIS KELAMIN :</h5>
+												<div class="row-fluid">
+													<input type="text" name="jurusan" class="span12" style="height: 30px; resize: none;"></input>
+												</div>
+												<h5>ID EKSTRAKULIKULER :</h5>
+												<div class="row-fluid">
+													<input type="text" name="jurusan" class="span12" style="height: 30px; resize: none;"></input>
+												</div>
+												<h5>PASSWORD :</h5>
+												<div class="row-fluid">
+													<input type="text" name="jurusan" class="span12" style="height: 30px; resize: none;"></input>
+												</div>
+												<br></br>
+												<div class="clearfix">
+													<input type="submit" name="submit" value="Simpan Data" class="btn btn-primary pull-right">
+													<p>&nbsp;</p>
+												</div>
+												<input type="hidden" name="MM_insert" value="form1">
+											</form>
+											<p>&nbsp;</p>										
+										</div>
+									</div>
 								
                             </div><!--/.module-body-->
 						</div><!--/.module-->
