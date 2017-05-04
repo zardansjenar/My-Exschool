@@ -61,8 +61,6 @@
 							<div class="module-body">
 								<div class="stream-composer media">
 									<div class="media-body">
-										
-									<?php echo $error;?>
 
 									<?php echo form_open_multipart('pelatih/uploadFile');?>
 
